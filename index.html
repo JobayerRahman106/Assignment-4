@@ -3,9 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS</title>
+    <title>Assigment Five</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+         .custom-fonts{
+            font-family: "Raleway", "Inter", sans-serif;
+        }
+        .banner-section{
+            background-image: url(../images/banner.png);
+        }
+
+    </style>
+
 </head>
-<body>
-    
+<body class="custom-fonts">
+    <header class="mx-10">
+        <div class="nav-section">
+            <div class="navbar bg-base-100">
+                <div class="navbar-start">
+                  <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                    </div>
+                    <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                      <li><a>Home</a></li>
+                      <li><a>About</a></li>
+                      <li><a>Destination</a></li>
+                      <li><a>Search</a></li>
+                    </ul>
+                  </div>
+                  <a class="btn btn-ghost text-4xl text-gray-950 font-extrabold font-['Raleway']">Jobayer-Ticket</a>
+                </div>
+                <div class="navbar-center hidden lg:flex">
+                  <ul class="menu menu-horizontal px-1 text-gray-950 text-opacity-70 text-lg font-medium font-['Raleway']">
+                    <li><a>Home</a></li>
+                    <li><a>About</a></li>
+                    <li><a>Destination</a></li>
+                    <li><a>Search</a></li>
+                  </ul>
+                </div>
+                <div class="navbar-end">
+                  <a class="btn text-[#1DD100] text-xl font-bold font-['Raleway']">Bus <img src="images/bus-icon.png" alt=""></a>
+                </div>
+              </div>
+        </div>
+        <div class="banner-section bg-no-repeat bg-cover text-center rounded-[32px]">
+            <h3 class="text-white text-[64px] font-extrabold font-['Raleway'] leading-[86px] pt-16">End-to-End Travel with <br> <span class="text-[#1DD100] text-[64px]font-extrabold font-['Raleway'] leading-[86px]">Jobayer Paribahan</span></h3>
+            <p class="text-white text-lg font-['Inter'] leading-[30px] ">Ensure a stress-free journey with our easy-to-use platform for booking tickets.<br> Simplify your travel experience with our user-friendly ticket booking platform.<br>  Book your tickets hassle-free on our user-friendly platform. </p>
+            <div class="pb-16 pt-5">
+              <button type="button" id="buyTicketButton" class="text-[#030712] font-['Raleway'] text-xl font-bold px-7 py-5 bg-[#1DD100] rounded-xl">Buy Tickets</button>
+            </div>
+        </div>
+    </header>
+    <main>
+      <section class="mx-10 mt-10 mb-10">
+        <h3 class="text-center text-[#030712] text-[40px] font-bold font-['Raleway'] py-5">Best offers for you</h3>
+        <div class="flex justify-between gap-5">
+          <!-- card one -->
+          <div class="card card-side bg-[#FFBF0F] shadow-xl rounded-3xl px-10 flex-1">
+            <div class="card-body">
+              <h2 class="card-title text-[#030712] text-opacity-80 text-[40px] font-black font-['Inter'] leading-9">15% OFF</h2>
+              <p class="text-[#030712] text-opacity-80 text-xl font-semibold font-['Inter'] leading-9">on your next purchase</p>
+              <p class="text-[#030712] text-opacity-80 text-lg font-medium font-['Inter'] leading-9">use by january 2024</p>
+            </div>
+            <div>
+              <h3 id="fifteen-Percent-Discount" class="text-[32px] text-[#030712] font-bold font-['Raleway'] leading-[57.60px] pt-7">NEW15</h3>
+              <P class="text-xl text-[#030712] text-opacity-40 font-medium font-['Raleway'] leading-9">Coupon Code</P>
+            </div>
+          </div>
+          <!-- card TWO -->
+          <div class="card card-side bg-[#F78C9C] shadow-xl rounded-3xl px-10 flex-1">
+            <div class="card-body">
+              <h2 class="card-title text-[#030712] text-opacity-80 text-[40px] font-black font-['Inter'] leading-9">20% OFF</h2>
+              <p class="text-[#030712] text-opacity-80 text-xl font-semibold font-['Inter'] leading-9">on your next purchase</p>
+              <p class="text-[#030712] text-opacity-80 text-lg font-medium font-['Inter'] leading-9">use by january 2024</p>
+            </div>
+            <div class="">
+              <h3 id="twenty-Percent-Discount" class="text-[32px] text-[#030712] font-bold font-['Raleway'] leading-[57.60px] pt-7">Couple 20</h3>
+              <P class="text-xl text-[#030712] text-opacity-40 font-medium font-['Raleway'] leading-9">Coupon Code</P>
+            </div>
+          </div>
+        </div>
+        <div class="text-center my-16">
+          <button type="button" class="text-[#1DD100] text-xl font-bold font-['Raleway'] border border-[#1DD100] rounded-xl py-5 px-8">See All Offers</button>
+        </div>
+      </section>
+
+    </main>
+    <script src="js/main.js"></script>
 </body>
 </html>
