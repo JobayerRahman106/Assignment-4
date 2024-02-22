@@ -74,3 +74,45 @@ for (const sit of someOfsits) {
         }
     });
 }
+
+
+
+// coupon section
+document.getElementById('aply-btn').addEventListener('click', function () {
+    const fifteenPercentDiscount = document.getElementById('fifteen-Percent-Discount');
+    const fifteenDiscount = fifteenPercentDiscount.innerText;
+
+    const twentyPercentDiscount = document.getElementById('twenty-Percent-Discount');
+    const twentyDiscount = twentyPercentDiscount.innerText;
+
+    const copounValue = document.getElementById('discount-input');
+    const copounText = copounValue.value.trim();
+
+    const grandTotalArea = document.getElementById('grand-cost');
+    const grandTotal = parseInt(grandTotalArea.innerText);
+
+    if (copounText === fifteenDiscount || copounText === twentyDiscount) {
+        let result;
+
+        if (fifteenDiscount === copounText) {
+            const fifteenPercentOffer = grandTotal * (.15);
+            result = grandTotal - fifteenPercentOffer;  
+        } else if (twentyDiscount === copounText) {
+            const twentyPercentOffer = grandTotal * (.20);
+            result = grandTotal - twentyPercentOffer;
+        }
+        grandTotalArea.innerText = result.toFixed(2);
+
+        const hideCouponArea = document.getElementById('apply-copun-area');
+        if (hideCouponArea) {
+            hideCouponArea.style.display = 'none';
+        }
+
+    } else {
+        alert(`Cupon dosen't match.`);
+    }
+});
+
+document.getElementById('continue-button').addEventListener('click', function () {
+    window.location.reload();
+});
